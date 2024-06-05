@@ -1,0 +1,41 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.btn {
+   padding: 10px 25px;
+   margin: 10px auto;
+   background-color: greenyellow;
+   border-radius: 10px;
+   border: none;
+   display: block;
+}
+
+.grid-container {
+   width: 960px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   height: 90vh;
+}
+
+.row {
+   display: flex;
+   width: 100%;
+   flex-grow: 1;
+}
+
+.grid-item {
+   flex-grow: 1;
+   background: transparent;
+   border: 1px solid black;
+}
+
+
+
+
+/* .grid-item:hover {
+   background: lightblue;
+} */
