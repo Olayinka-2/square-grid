@@ -41,7 +41,7 @@ const divs = document.querySelectorAll(".grid-item");
 
 function handleMouseOver(event) {
    if(event.target.classList.contains("grid-item")) {
-      event.target.style.backgroundColor = `rgba( ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Number(10)} )`;
+      event.target.style.backgroundColor = `rgba( ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Number(0.1)} )`;
    }
 }
 
