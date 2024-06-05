@@ -1,4 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
+gridContainer.addEventListener("mouseover", handleMouseOver);
+gridContainer.addEventListener("mouseout", handleMouseOut);
+
 items();
 
 
@@ -36,12 +39,14 @@ function items(column = 16, row = 16){
 
 const divs = document.querySelectorAll(".grid-item");
 
-divs.forEach((div) => {
-   div.addEventListener("mouseover", () => {
-      div.style.backgroundColor = "lightblue";
-   });
-   div.addEventListener("mouseout", () => {
-      div.style.backgroundColor = "transparent";
-   });
-});
+function handleMouseOver(event) {
+   if(event.target.classList.contains("grid-item")) {
+      event.target.style.backgroundColor = `rgb( ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)} )`;
+   }
+}
 
+function handleMouseOut(event){
+   if(event.target.classList.contains("grid-item")) {
+      event.target.style.backgroundColor = "transparent";
+   }
+}
